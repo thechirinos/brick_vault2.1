@@ -29,6 +29,7 @@ class LegoSetsController < ApplicationController
   # POST /lego_sets.json
   def create
     @lego_set = LegoSet.new(lego_set_params)
+    @lego_set.user = current_user
 
     respond_to do |format|
       if @lego_set.save
