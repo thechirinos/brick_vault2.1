@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Set:</strong>
+  <%= @lego_set.set %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lego_set.name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @lego_set.link %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @lego_set.user %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lego_set.description %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @lego_set.theme %>
+</p>
+
+<%= link_to 'Edit', edit_lego_set_path(@lego_set) %> |
+<%= link_to 'Back', lego_sets_path %>

@@ -1,0 +1,35 @@
+<h1>Listing lego_sets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Set</th>
+      <th>Name</th>
+      <th>Link</th>
+      <th>User</th>
+      <th>Description</th>
+      <th>Theme</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lego_sets.each do |lego_set| %>
+      <tr>
+        <td><%= lego_set.set %></td>
+        <td><%= lego_set.name %></td>
+        <td><%= lego_set.link %></td>
+        <td><%= lego_set.user %></td>
+        <td><%= lego_set.description %></td>
+        <td><%= lego_set.theme %></td>
+        <td><%= link_to 'Show', lego_set %></td>
+        <td><%= link_to 'Edit', edit_lego_set_path(lego_set) %></td>
+        <td><%= link_to 'Destroy', lego_set, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lego set', new_lego_set_path %>
